@@ -22,8 +22,11 @@ function Quiz() {
       setScore(score + 1);
     }
   };
+  let checkedValue = document.querySelectorAll(".checked");
   console.log(score);
-
+  checkedValue.forEach((curentValue) => {
+    curentValue.checked = false;
+  });
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center gap-10 bg-[rgb(0,0,41)] text-white">
       <div className="w-full flex justify-center">
@@ -35,6 +38,7 @@ function Quiz() {
         </div>
         <div className="flex gap-2">
           <input
+            className="checked"
             type="radio"
             name="radio"
             onChange={handleInput}
@@ -44,6 +48,7 @@ function Quiz() {
         </div>
         <div className="flex gap-2">
           <input
+            className="checked"
             type="radio"
             name="radio"
             onChange={handleInput}
@@ -53,6 +58,7 @@ function Quiz() {
         </div>
         <div className="flex gap-2">
           <input
+            className="checked"
             type="radio"
             name="radio"
             onChange={handleInput}
@@ -62,6 +68,7 @@ function Quiz() {
         </div>
         <div className="flex gap-2">
           <input
+            className="checked"
             type="radio"
             name="radio"
             onChange={handleInput}
