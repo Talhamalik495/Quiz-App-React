@@ -1,0 +1,42 @@
+export let Data = [
+  {
+    q: "What is Javascript ?",
+    a: "JS is Programming language",
+    b: "JS is Framework",
+    c: "None",
+    d: "Typed Language",
+    ans: "JS is Programming language",
+  },
+  {
+    q: "What is ReactJS ?",
+    a: "Library",
+    b: "React is a Javascript library",
+    c: "Framwork",
+    d: "Language",
+    ans: "React is a Javascript library",
+  },
+  {
+    q: "Full Form of JS ?",
+    a: "Javasell",
+    b: "Javaspring",
+    c: "Javascript",
+    d: "Javasplit",
+    ans: "Javascript",
+  },
+  {
+    q: "What Dvelope JS ?",
+    a: "Brendon",
+    b: "Brendon Mac",
+    c: "Bretly",
+    d: "Brindon Eich",
+    ans: "Brindon Eich",
+  },
+  {
+    q: "What Dvelope ReactJS ?",
+    a: "Jordan Walk",
+    b: "Jordan",
+    c: "Jordan King",
+    d: "Jordan Seen",
+    ans: "Jordan Walk",
+  },
+];
