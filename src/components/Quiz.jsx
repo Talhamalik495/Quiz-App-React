@@ -1,10 +1,18 @@
 import React from "react";
 import { useState } from "react";
 import { Data } from "../utils/Data";
+import { toast } from "react-toastify";
 function Quiz() {
   let [data, setData] = useState(Data);
   console.log(data);
-
+  let [index, setIndex] = useState(0);
+  let next = () => {
+    if (index < data.length - 1) {
+      setIndex((prev) => prev + 1);
+    } else {
+      toast.success("Quiz Over");
+    }
+  };
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center gap-10 bg-[rgb(0,0,41)] text-white">
       <div className="w-full flex justify-center">
@@ -12,26 +20,29 @@ function Quiz() {
       </div>
       <div className="min-h-80 flex  px-3 flex-col w-[500px] bg-white text-black rounded-md  py-5  gap-7">
         <div>
-          <h1 className="text-3xl">{data[0].q}</h1>
+          <h1 className="text-3xl">Q:{data[index].q}</h1>
         </div>
         <div className="flex gap-2">
           <input type="radio" />
-          <p>{data[0].a}</p>
+          <p>A :{data[index].a}</p>
         </div>
         <div className="flex gap-2">
           <input type="radio" />
-          <p>{data[0].b}</p>
+          <p>B :{data[index].b}</p>
         </div>
         <div className="flex gap-2">
           <input type="radio" />
-          <p>{data[0].c}</p>
+          <p>C :{data[index].c}</p>
         </div>
         <div className="flex gap-2">
           <input type="radio" />
-          <p>{data[0].d}</p>
+          <p>D :{data[index].d}</p>
         </div>
         <div className="flex gap-2">
-          <button className="px-10 h-10 bg-[rgb(0,0,41)] text-white rounded-md">
+          <button
+            onClick={next}
+            className="px-10 h-10 bg-[rgb(0,0,41)] text-white rounded-md"
+          >
             Next
           </button>
         </div>
