@@ -16,7 +16,7 @@ function Quiz() {
       let nextbtn = document.querySelector(".nextbtn");
       quizend.innerText = "";
       select.innerHTML = `Youre Score${score}/5`;
-      nextbtn.innerHTML = "Try again";
+      nextbtn.innerHTML = "reset";
       nextbtn.classList.add("reset");
       let reset = document.querySelector(".reset");
       reset.addEventListener("click", () => {
@@ -39,11 +39,11 @@ function Quiz() {
   };
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center gap-10 bg-[rgb(0,0,41)] text-white">
+    <div className="w-full h-screen flex flex-col items-center justify-center gap-10 bg-red-300 text-white">
       <div className="w-full flex justify-center">
         <h1 className="text-4xl">Quiz App</h1>
       </div>
-      <div className="min-h-50 flex   flex-col justify-center items-center   w-[600px] bg-white text-black rounded-md   gap-2">
+      <div className=" flex   flex-col justify-center items-center   w-[600px] bg-white text-black rounded-md   gap-2">
         <div className="max-h-70 flex  px-7 flex-col w-[600px] bg-white text-black rounded-md  py-10  gap-7 quizend">
           <div>
             <h1 className="text-2xl">
@@ -97,10 +97,11 @@ function Quiz() {
             <label htmlFor="four">D :{data[index].d}</label>
           </div>
         </div>
+        <div className="w-full min-h-0.5 bg-red-300"></div>
         <div className=" w-44 h-20 flex flex-col justify-center items-center gap-2">
           <button
             onClick={next}
-            className="px-10 h-10 bg-[rgb(0,0,41)] text-white rounded-md  nextbtn"
+            className="px-20 h-10 bg-red-300 text-white rounded-md  nextbtn"
           >
             Next
           </button>
