@@ -18,11 +18,11 @@ function Quiz() {
     event.preventDefault();
     let choseValue = event.target.value;
     console.log(choseValue);
-    // let result =
-    //   data[index].ans == choseValue ? setScore(score + 1) : setScore(score);
-    // console.log(score);
+    if (choseValue == data[index].ans) {
+      setScore(score + 1);
+    }
   };
-  // console.log();
+  console.log(score);
 
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center gap-10 bg-[rgb(0,0,41)] text-white">
