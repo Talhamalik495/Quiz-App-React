@@ -44,11 +44,10 @@ function Quiz() {
         <h1 className="text-4xl">Quiz App</h1>
       </div>
       <div className=" flex   flex-col justify-center items-center   w-[600px] bg-white text-black rounded-md   gap-2">
-        <div className="max-h-70 flex  px-7 flex-col w-[600px] bg-white text-black rounded-md  py-10  gap-7 quizend">
+        <div className="max-h-70 flex  px-7 flex-col w-[600px] bg-white text-black rounded-md  py-10  gap-7 text-lg font-medium quizend">
           <div>
             <h1 className="text-2xl">
-              Q:{index + 1}
-              {data[index].q}
+              Q:{index + 1}){data[index].q}
             </h1>
           </div>
           <div className="flex gap-2">
