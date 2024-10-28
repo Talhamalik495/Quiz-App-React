@@ -6,6 +6,7 @@ function Quiz() {
   let [data, setData] = useState(Data);
   console.log(data);
   let [index, setIndex] = useState(0);
+  let [score, setScore] = useState(0);
   let next = () => {
     if (index < data.length - 1) {
       setIndex((prev) => prev + 1);
@@ -13,6 +14,16 @@ function Quiz() {
       toast.success("Quiz Over");
     }
   };
+  let handleInput = (event) => {
+    event.preventDefault();
+    let choseValue = event.target.value;
+    console.log(choseValue);
+    // let result =
+    //   data[index].ans == choseValue ? setScore(score + 1) : setScore(score);
+    // console.log(score);
+  };
+  // console.log();
+
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center gap-10 bg-[rgb(0,0,41)] text-white">
       <div className="w-full flex justify-center">
@@ -23,19 +34,39 @@ function Quiz() {
           <h1 className="text-3xl">Q:{data[index].q}</h1>
         </div>
         <div className="flex gap-2">
-          <input type="radio" />
+          <input
+            type="radio"
+            name="radio"
+            onChange={handleInput}
+            value={data[index].a}
+          />
           <p>A :{data[index].a}</p>
         </div>
         <div className="flex gap-2">
-          <input type="radio" />
+          <input
+            type="radio"
+            name="radio"
+            onChange={handleInput}
+            value={data[index].b}
+          />
           <p>B :{data[index].b}</p>
         </div>
         <div className="flex gap-2">
-          <input type="radio" />
+          <input
+            type="radio"
+            name="radio"
+            onChange={handleInput}
+            value={data[index].c}
+          />
           <p>C :{data[index].c}</p>
         </div>
         <div className="flex gap-2">
-          <input type="radio" />
+          <input
+            type="radio"
+            name="radio"
+            onChange={handleInput}
+            value={data[index].d}
+          />
           <p>D :{data[index].d}</p>
         </div>
         <div className="flex gap-2">
