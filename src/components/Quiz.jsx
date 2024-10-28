@@ -43,10 +43,13 @@ function Quiz() {
       <div className="w-full flex justify-center">
         <h1 className="text-4xl">Quiz App</h1>
       </div>
-      <div className="min-h-60 flex   flex-col justify-center items-center   w-[600px] bg-white text-black rounded-md   gap-2">
-        <div className="max-h-80 flex  px-3 flex-col w-[600px] bg-white text-black rounded-md  py-5  gap-7 quizend">
+      <div className="min-h-50 flex   flex-col justify-center items-center   w-[600px] bg-white text-black rounded-md   gap-2">
+        <div className="max-h-70 flex  px-3 flex-col w-[600px] bg-white text-black rounded-md  py-10  gap-7 quizend">
           <div>
-            <h1 className="text-3xl">Q:{data[index].q}</h1>
+            <h1 className="text-2xl">
+              Q:{index + 1}
+              {data[index].q}
+            </h1>
           </div>
           <div className="flex gap-2">
             <input
@@ -95,7 +98,6 @@ function Quiz() {
           </div>
         </div>
         <div className=" w-44 h-20 flex flex-col justify-center items-center gap-2">
-          
           <button
             onClick={next}
             className="px-10 h-10 bg-[rgb(0,0,41)] text-white rounded-md  nextbtn"
