@@ -39,74 +39,93 @@ function Quiz() {
   };
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center gap-10 bg-red-300 text-white">
-      <div className="w-full flex justify-center">
-        <h1 className="text-4xl">Quiz App</h1>
-      </div>
-      <div className=" flex   flex-col justify-center items-center   w-[600px] bg-white text-black rounded-md   gap-2">
-        <div className="max-h-70 flex  px-7 flex-col w-[600px] bg-white text-black rounded-md  py-10  gap-7 text-lg font-medium quizend">
+    <div className="w-full h-full flex flex-col items-center justify-center gap-0  text-white font-extralight py-1">
+      <div className=" flex   flex-col justify-center items-center max-h-[610px]   w-[700px] bg-white text-black rounded-md   gap-2">
+        <div className=" flex  px-7 flex-col w-[700px]  text-black rounded-md  py-10  gap-7 text-lg font-medium quizend">
           <div>
-            <h1 className="text-2xl">
-              Q:{index + 1}){data[index].q}
+            <div className="w-full flex justify-center pb-7">
+              <h1 className="text-4xl">Quiz App</h1>
+            </div>
+            <h1 className="text-[25px] text-[rgb(17 24 39 )] font-popinspopins">
+              {index + 1}.{data[index].q}
             </h1>
           </div>
-          <div className="flex gap-2">
-            <input
-              id="first"
-              className="checked"
-              type="radio"
-              name="radio"
-              onChange={handleInput}
-              value={data[index].a}
-            />
-            <label htmlFor="first">A :{data[index].a}</label>
+          <div className="flex gap-2 border-[0.5px] border-gray-400">
+            <label
+              htmlFor="first"
+              className="border-2 border-white px-3 py-3 w-full flex gap-2 "
+            >
+              <input
+                id="first"
+                className="checked"
+                type="radio"
+                name="radio"
+                onChange={handleInput}
+                value={data[index].a}
+              />
+              {data[index].a}
+            </label>
           </div>
-          <div className="flex gap-2">
-            <input
-              id="second"
-              className="checked"
-              type="radio"
-              name="radio"
-              onChange={handleInput}
-              value={data[index].b}
-            />
-            <label htmlFor="second">B :{data[index].b}</label>
+          <div className="flex gap-2 border-[0.5px] border-gray-400">
+            <label
+              htmlFor="second"
+              className="border-2 border-white px-3 py-3 w-full flex gap-2 "
+            >
+              <input
+                id="second"
+                className="checked"
+                type="radio"
+                name="radio"
+                onChange={handleInput}
+                value={data[index].b}
+              />
+              {data[index].b}
+            </label>
           </div>
-          <div className="flex gap-2">
-            <input
-              id="thard"
-              className="checked"
-              type="radio"
-              name="radio"
-              onChange={handleInput}
-              value={data[index].c}
-            />
-
-            <label htmlFor="thard">C :{data[index].c}</label>
+          <div className="flex gap-2 border-[0.5px] border-gray-400">
+            <label
+              htmlFor="thard"
+              className="border-2 border-white px-3 py-3 w-full flex gap-2 "
+            >
+              <input
+                id="thard"
+                className="checked"
+                type="radio"
+                name="radio"
+                onChange={handleInput}
+                value={data[index].c}
+              />
+              {data[index].c}
+            </label>
           </div>
-          <div className="flex gap-2">
-            <input
-              id="four"
-              className="checked"
-              type="radio"
-              name="radio"
-              onChange={handleInput}
-              value={data[index].d}
-            />
-            <label htmlFor="four">D :{data[index].d}</label>
+          <div className="flex gap-2 border-[0.5px] border-gray-400">
+            <label
+              htmlFor="four"
+              className="border-2 border-white px-3 py-3 w-full flex gap-2 "
+            >
+              <input
+                id="four"
+                className="checked"
+                type="radio"
+                name="radio"
+                onChange={handleInput}
+                value={data[index].d}
+              />
+              {data[index].d}
+            </label>
           </div>
         </div>
-        <div className="w-full min-h-0.5 bg-red-300"></div>
-        <div className=" w-44 h-20 flex flex-col justify-center items-center gap-2">
+
+        <div className=" w-44 h-32 flex flex-col justify-center items-center gap-2">
           <button
             onClick={next}
-            className="px-20 h-10 bg-red-300 text-white rounded-md  nextbtn"
+            className="px-20 h-12 bg-purple-900 text-white rounded-md  nextbtn"
           >
             Next
           </button>
+          <p className="text-lg font-poppins">{index + 1}to 5 Question</p>
           <p className="score text-2xl"></p>
         </div>
-        <div></div>
       </div>
     </div>
   );
