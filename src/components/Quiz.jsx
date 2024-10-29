@@ -41,11 +41,13 @@ function Quiz() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center gap-0  text-white font-extralight py-1">
       <div className=" flex   flex-col justify-center items-center max-h-[610px]   w-[700px] bg-white text-black rounded-md   gap-2">
-        <div className=" flex  px-7 flex-col w-[700px]  text-black rounded-md  py-10  gap-7 text-lg font-medium quizend">
+        <div className=" flex  px-7 flex-col w-[700px]  text-black rounded-md  pt-10   gap-7 text-lg font-medium quizend">
           <div>
-            <div className="w-full flex justify-center pb-7">
-              <h1 className="text-4xl">Quiz App</h1>
+            <div className="w-full flex  pb-7">
+              <h1 className="text-3xl">Quiz App</h1>
             </div>
+
+            <hr className="border-gray-500 mb-10" />
             <h1 className="text-[25px] text-[rgb(17 24 39 )] font-popinspopins">
               {index + 1}.{data[index].q}
             </h1>
